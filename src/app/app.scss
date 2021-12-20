@@ -1,0 +1,320 @@
+.menu-header {
+  background-image: url('../assets/images/header2.png') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding: 0px;
+  min-height: 120px;
+}
+
+.menu-headerforothr {
+  background-image: url('../assets/img6.png') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding: 0px;
+  min-height: 200px;
+}
+
+.menu-bottom {
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  position: absolute;
+}
+
+.menu-text {
+  color: #fff;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.avatar,
+.item-avatar .avatar {
+  background-position: center center;
+  background-size: cover;
+  border-radius: 30%;
+  display: inline-block;
+  height: 66px;
+  left: 16px;
+  position: absolute;
+  width: 66px;
+  opacity: 1;
+  transform: translateZ(0px) rotate(0deg) scale(1) !important;
+  transition: all 0.3s ease-out 0s !important;
+  top: 26px;
+  left: 26px;
+}
+
+.alert-md .alert-head {
+  padding: 20px 24px 20px 24px;
+  text-align: left;
+}
+
+.alert-md .alert-message {
+  max-height: 240px;
+  font-size: 16px;
+}
+
+.alert-md .alert-message,
+.alert-md .alert-input-group {
+  padding: 0 24px 10px 24px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-popover .popover-content {
+  top: 100px !important;
+  left: 34px !important;
+  height: 187px;
+  width: 80%;
+}
+
+#custom_ion_title {
+  /*  text-align: center;
+    // font-family: Unicode;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+    z-index: -1;  */
+  text-align: left;
+}
+
+/* @mixin multiLineEllipsis($lineHeight: 1.6em,
+  $lineCount: 1,
+  $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -2em;
+  padding-right: 1em;
+
+  &:before {
+    content: '...';
+    color: #ff934b;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 1em;
+    background: $bgColor;
+  }
+}
+
+.block-with-text {
+  @include multiLineEllipsis($lineHeight: 2em, $lineCount: 3, $bgColor: white);
+} */
+
+.toolbar-md {
+  padding: 4px;
+  min-height: 50px;
+}
+
+.selectable {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.slim-loading-bar {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+
+/* Styling for the Slim Loading Progress Bar itself */
+
+.slim-loading-bar-progress {
+  margin: 0;
+  padding: 0;
+  z-index: 99998;
+  background-color: green;
+  color: green;
+  box-shadow: 0 0 10px 0;
+  /* Inherits the font color */
+  height: 2px;
+  opacity: 0;
+  /* Add CSS3 styles for transition smoothing */
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+
+#mm {
+  cursor: auto;
+  background-color: transparent;
+  background-image: url(../assets/images/mm.png); //logo-mpt
+  background-repeat: no-repeat;
+  background-position: center;
+  // border-radius: 10%;
+  background-size: 90% 90%;
+  width: 60px;
+  height: 33px;
+  margin-right: 5px;
+}
+
+#eng {
+  cursor: auto;
+  background-color: transparent;
+  background-image: url(../assets/images/eng.png); //logo-telenor
+  background-repeat: no-repeat;
+  background-position: center;
+  // border-radius: 10%;
+  background-size: 90% 90%;
+  width: 60px;
+  height: 33px;
+  margin-right: 5px;
+}
+
+#img_btn {
+  cursor: auto;
+  background-color: transparent;
+  // background-image: url(../assets/images/btn1.png); //logo-mpt
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 180px;
+  // border-radius: 10%;
+ /*  background-size: 90% 90%;
+  width: 60px;
+  height: 33px;
+  margin-right: 5px; */
+}
+
+.activeHighLight {
+  color: burlywood !important;
+  background-color: skyblue !important; //background-color: transparent;
+}
+
+ion-scroll[scrollY] {
+  white-space: nowrap;
+  height: 85%;
+  overflow: hidden;
+
+  .scroll-item {
+    display: inline-block;
+  }
+
+  ion-avatar img {
+    margin: 10px;
+  }
+}
+
+#menubtn {
+  padding-left:10px; padding-right:8px; padding-top: 10px; padding-bottom: 65px; vertical-align: middle;
+}
+
+#menubtntwo {
+  padding-left:10px; padding-right:8px; padding-top: 10px; padding-bottom: 70px; vertical-align: middle;
+}
+
+ion-scroll[scroll-avatar] {
+  height: 55px;
+}
+
+#title-bg-image {
+  background-image: url('../assets/images/mainscreen.png') !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  height: 100%;
+}
+#title-bg-header {
+  background-image: url('../assets/images/header3.png') !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  height: 100%;
+}
+
+#label_font {
+  padding: 1px 2px 2px;
+  font-size: 12px !important;
+  // color: map-get($colors, fontcolortwo) !important;
+}
+
+#label_font_3 {
+  padding: 1px 2px 2px;
+  font-size: 13px !important;
+  font-style: !important;
+}
+
+#label_font_2 {
+  padding: 1px 5px 0px;
+  font-size: 13px !important;
+  // color: map-get($colors, fontcolortwo) !important;
+}
+
+#item_font_1 {
+  padding: 1px 2px;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  // color: map-get($colors, fontcolorone) !important;
+}
+
+#item_font_2 {
+  padding: 0px 5px 2px;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  // color: map-get($colors, pctwo) !important;
+}
+
+#item_font_3 {
+  padding: 0px 5px 2px;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  color: map-get($colors, msp) !important;
+}
+
+#button_arrow_right {
+  padding: 5px 5px;
+  cursor: auto;
+  background-color: transparent;
+  background-image: url(../assets/images/next.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  background-size: 100%;
+}
+
+#ads_img{
+  width: 18px;
+  height: 14px;
+  align-items: center;
+}
+
+.popover-content {
+  border-radius: 20px !important; //12px for ios
+  border: 10px solid white !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  padding-bottom: 5px !important;
+  padding-top: 5px !important;
+}
+
+
+#map {
+  width: 100% !important;
+  height: 50% !important;
+}

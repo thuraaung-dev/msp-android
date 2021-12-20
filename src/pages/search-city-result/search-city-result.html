@@ -1,0 +1,59 @@
+<!-- <ion-header>
+  <ion-navbar color="msp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="custom_ion_title" class="uni">{{textData[0]}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tappable (click)="home()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content class="uni">
+  <div id="title-bg-header">
+    <div align="right" tappable>
+      <img src='assets/images/menubtn.png' (click)="presentPopover($event)" id="menubtntwo">
+    </div>
+    <ion-scroll scrollY="true">
+      <div style="padding-top: 5px;" *ngIf="isLoading == 0">
+        <div align="center">
+          <ion-spinner name="circles"></ion-spinner>
+        </div>
+      </div>
+      <div *ngIf="flag == 1">
+        <ion-list>
+          <div class="uni" align="center">
+            <h2 id="item_font_3">{{searchKey.name}}</h2>
+          </div>
+        </ion-list>
+        <hr>
+        <ion-item-group tappable no-padding (click)="goDetails(data)" *ngFor="let data of description" class="uni">
+          <ion-item tappable text-wrap>
+            <ion-row item-left>
+              <img src="assets/images/list_logo.png">
+            </ion-row>
+            <h3 style="font-weight: bold; padding-left: 5px;" class="uni">{{data.title}}</h3>
+            <p style="padding-left: 5px;" class="uni">{{data.locName}} : {{data.catName}}</p>
+            <ion-row item-right>
+              <img *ngIf="data.adsStatus == '1'" id="ads_img" src="assets/images/ads.png">
+            </ion-row>
+            <ion-row item-right>
+              <ion-col item-right col-1 align="center">
+                <button id="button_arrow_right">
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-item-group>
+      </div>
+      <div *ngIf="flag == 0" align="center" class="uni">
+        <h3 style="padding:30px;color:#ccc;">
+          <span>No listing yet!</span>
+        </h3>
+      </div>
+    </ion-scroll>
+  </div>
+</ion-content>

@@ -1,0 +1,80 @@
+<!-- <ion-header>
+  <ion-navbar color="msp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="custom_ion_title" class="uni">{{textData[0]}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tappable (click)="home()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content no-padding mode="md" class="uni">
+  <div id="title-bg-header">
+    <div align="right" tappable>
+      <img src='assets/images/menubtn.png' (click)="presentPopover($event)" id="menubtntwo">
+    </div>
+    <div class="uni" align="center">
+      <h2 id="item_font_3">{{data.name}}</h2>
+    </div>
+    <ion-card>
+      <ion-list padding text-wrap class="uni">
+        <div align="left">
+          <h2 id="item_font_2">{{data.name}}</h2>
+          <h2 id="label_font_2">{{data.catName}}</h2>
+          <!-- <p id="label_font_3" *ngIf="data.address != ''">{{data.address}}</p> -->
+        </div>
+      </ion-list>
+      <hr>
+      <ion-row no-padding no-margin no-lines *ngIf="data.address != ''">
+        <ion-col col-1>
+          <ion-icon color="mspbtn" style="vertical-align: middle;" full name="pin"></ion-icon>
+        </ion-col>
+        <ion-col text-wrap col-11>
+          <span class="uni">{{data.address}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding no-margin no-lines *ngIf="data.websit != ''">
+        <ion-col col-1>
+          <ion-icon color="mspbtn" style="vertical-align: middle;" full name="globe"></ion-icon>
+        </ion-col>
+        <ion-col text-wrap col-11>
+          <a href="{{data.websit}}">{{data.websit}}</a>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding no-margin no-lines *ngIf="data.email != ''">
+        <ion-col col-1>
+          <ion-icon color="mspbtn" style="vertical-align: middle;" full name="ios-mail"></ion-icon>
+        </ion-col>
+        <ion-col text-wrap col-11>
+          <a href="mailto: {{data.email}}">{{data.email}}</a>
+        </ion-col>
+      </ion-row>
+      <div *ngIf="data.phone != ''">
+        <ion-row no-padding no-margin no-lines *ngFor="let phone of phoneList">
+          <ion-col col-1>
+            <ion-icon color="mspbtn" style="vertical-align: middle;" full name="call"></ion-icon>
+          </ion-col>
+          <ion-col text-wrap col-11>
+            <i ng-switch-when="PHONE">
+              <a href="tel:{{phone}}"
+                ng-class="{'item-divider': genericItem.Container =='ITEMDIVIDER', 'SS-item-no-border: genericItem.CONTAINER == 'ITEMNOBORDER'}">
+                <i class="icon ion-ios7-world-outline SS-list.icon3"></i>{{phone}}
+              </a>
+            </i>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div *ngIf="imageUrl != ''" align-items-center tappable>
+        <img (click)="viewPhoto()" src="{{imageUrl}}" onError="this.src = 'assets/images/logo.png'" />
+        <span *ngIf="network == false" id="label_font_3" class="uni">You need an internet connection to view the
+          image.</span>
+      </div>
+    </ion-card>
+    <div *ngIf="data.mapLat != ''" #map id="map"></div>
+  </div>
+
+</ion-content>

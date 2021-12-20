@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider style="font-size: 1.7rem;padding-top:0px;padding-left:0px;text-align:center;">
+      <span class="uni">{{textData[0]}}</span>
+    </ion-item-divider>
+
+    <ion-list radio-group [(ngModel)]="chooseLanguage">
+      <ion-item no-lines>
+        <ion-label>
+          <span class="uni">{{textData[1]}}</span>
+        </ion-label>
+        <ion-radio value="eng" tappable (ionSelect)="mcqAnswer('eng')"></ion-radio>
+      </ion-item>
+
+      <ion-item no-lines>
+        <ion-label>
+          <span class="uni">{{textData[2]}}</span>
+        </ion-label>
+        <ion-radio value="myan" tappable (ionSelect)="mcqAnswer('myan')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-item-group>
+</ion-content>

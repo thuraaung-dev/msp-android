@@ -1,0 +1,72 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+$popover-md-width: 290px;
+$item-md-detail-push-show: true;
+$item-wp-detail-push-show: true;
+$toolbar-ios-height:40px;
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+@import "ionic.globals";
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+$SIDEMENU_TOP: #2929a3;
+$SIDEMENU_BOTTOM: #7070db;
+$colors: ( primary: #488aff, secondary: #32db64, danger: #f53d3d, light: #f4f4f4, dark: #222,
+/*  mwallet :     #1E4889, // #c9131c, //#3B5998-->connect color
+  mwalletbtn :   #1E4889, // #f53d3d, #696363 //#1b4b95 */
+
+msp: #2457A8, mspbtn: #2457A8, mspsearch: #231F20, msphead: #FFF33E, // #1b4b95  ,
+gray:#D3D3D3);
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+@import "ionic.ionicons";
+// Fonts
+// --------------------------------------------------
+@import "roboto";
+@import "noto-sans";
+// loading icon design
+// $loading-ios-background: transparent;
+// $loading-md-background: $loading-ios-background;
+// $loading-wp-background: $loading-ios-background;
+// $loading-md-box-shadow: none;
+// $loading-ios-spinner-circles-color: white;
+// $spinner-ios-circles-color: white;
+// $spinner-ios-ios-color: white;
+// $loading-ios-spinner-color: white;
+// $action-sheet-ios-text-align: center;
+// $action-sheet-md-text-align: center;
+// $action-sheet-wp-text-align: center;

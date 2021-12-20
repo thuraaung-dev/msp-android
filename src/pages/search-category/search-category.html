@@ -1,0 +1,305 @@
+<!-- <ion-header>
+  <ion-navbar color="msp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="custom_ion_title" class="uni">{{textData[0]}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tappable (click)="home()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content mode="md">
+  <div id="title-bg-image">
+    <div align="right" tappable>
+      <img src='assets/images/menubtn.png' (click)="presentPopover($event)" id="menubtn">
+    </div>
+    <ion-scroll scrollY="true">
+      <div class="uni" align="center">
+        <h2 id="item_font_3">{{textData[0]}}</h2>
+      </div>
+      <div align="right" tappable>
+        <button mode="md" ion-button class="scroll-item" mode="md" tappable (click)="changeAlpha('mm')"
+          id="mm"></button>
+        <button mode="md" ion-button class="scroll-item" mode="md" tappable (click)="changeAlpha('eng')"
+          id="eng"></button>
+      </div>
+      <div *ngIf="alpha == 'eng'">
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[0])">{{engAlpha[0]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[1])">{{engAlpha[1]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[2])">{{engAlpha[2]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[3])">{{engAlpha[3]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[4])">{{engAlpha[4]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[5])">{{engAlpha[5]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[6])">{{engAlpha[6]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[7])">{{engAlpha[7]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[8])">{{engAlpha[8]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[9])">{{engAlpha[9]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[10])">{{engAlpha[10]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[11])">{{engAlpha[11]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[12])">{{engAlpha[12]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[13])">{{engAlpha[13]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[14])">{{engAlpha[14]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[15])">{{engAlpha[15]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[16])">{{engAlpha[16]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[17])">{{engAlpha[17]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[18])">{{engAlpha[18]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[19])">{{engAlpha[19]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[20])">{{engAlpha[20]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[21])">{{engAlpha[21]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[22])">{{engAlpha[22]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[23])">{{engAlpha[23]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[24])">{{engAlpha[24]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" style="width: 50px;" tappable
+              (click)="goMenu(engAlpha[25])">{{engAlpha[25]}}</button>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div *ngIf="alpha == 'mm'">
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[0])">{{mmAlpha[0]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[1])">{{mmAlpha[1]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[2])">{{mmAlpha[2]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[3])">{{mmAlpha[3]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[4])">{{mmAlpha[4]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[5])">{{mmAlpha[5]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[6])">{{mmAlpha[6]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[7])">{{mmAlpha[7]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[8])">{{mmAlpha[8]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[9])">{{mmAlpha[9]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[10])">{{mmAlpha[10]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[11])">{{mmAlpha[11]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[12])">{{mmAlpha[12]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[13])">{{mmAlpha[13]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[14])">{{mmAlpha[14]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[15])">{{mmAlpha[15]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[16])">{{mmAlpha[16]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[17])">{{mmAlpha[17]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[18])">{{mmAlpha[18]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[19])">{{mmAlpha[19]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[20])">{{mmAlpha[20]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[21])">{{mmAlpha[21]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[22])">{{mmAlpha[22]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[23])">{{mmAlpha[23]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[24])">{{mmAlpha[24]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[25])">{{mmAlpha[25]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[26])">{{mmAlpha[26]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[27])">{{mmAlpha[27]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[28])">{{mmAlpha[28]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[29])">{{mmAlpha[29]}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center" style="padding-right: 5px; padding-left: 5px;">
+          <ion-col></ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[30])">{{mmAlpha[30]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[31])">{{mmAlpha[31]}}</button>
+          </ion-col>
+          <ion-col>
+            <button color="mspbtn" ion-button class="uni" style="width: 50px" ion-button tappable
+              (click)="goMenu(mmAlpha[32])">{{mmAlpha[32]}}</button>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+      </div>
+      <div class="uni" align="center">
+        <ion-icon tappable (click)="goMenuAll()">
+          <img style="width: 180px;" src="assets/images/btn5.png">
+        </ion-icon>
+      </div>
+    </ion-scroll>
+  </div>
+</ion-content>

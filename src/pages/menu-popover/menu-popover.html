@@ -1,0 +1,10 @@
+<ion-content>
+  <ion-item-group tappable *ngFor="let p of pages">    
+    <ion-item menuClose *ngFor="let a of p.data" tappable (click)="openPage(a)">
+      <span style="color:#808080;" class="uni">{{a.title}}</span>
+      <ion-icon item-right>
+        <img src="assets/images/{{a.icon}}">
+      </ion-icon>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

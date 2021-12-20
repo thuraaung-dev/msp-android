@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-navbar color="msp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="custom_ion_title" class="uni">{{textData[0]}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tappable (click)="home()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+<ion-content mode="md">
+  <div id="title-bg-image">
+    <div align="right" tappable>
+      <img src='assets/images/menubtn.png' (click)="presentPopover($event)" id="menubtn">
+    </div>
+    <div class="uni" align="center">
+      <h2 id="item_font_3">{{textData[0]}}</h2>
+    </div>
+    <div style="padding-left:10px; padding-right:8px; padding-top: 20px; padding-bottom: 5px;">
+      <ion-item>
+        <ion-input class="uni" type="text" autocomplete="true" spellcheck="true" placeholder={{textData[1]}}
+          [(ngModel)]="companyName">{{companyName}}
+        </ion-input>
+      </ion-item>
+    </div>
+    <div style="padding-left:10px; padding-right:8px; padding-top: 5px; padding-bottom: 5px;">
+      <ion-item>
+        <ion-label floating style="margin-top: 7px;"></ion-label>
+        <ion-select class="uni" [(ngModel)]="type" interface="popover" (ionChange)="changeType(type)">
+          <ion-option value="1" selected="true">Start with</ion-option>
+          <ion-option value="2">Include in</ion-option>
+        </ion-select>
+      </ion-item>
+      <div class="uni" align="center" style="padding-top: 20px; padding-bottom: 30px;">
+        <button style="width: 100%;" color="mspsearch" ion-button tappable
+          (click)="search()">{{textData[2] | uppercase}}</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

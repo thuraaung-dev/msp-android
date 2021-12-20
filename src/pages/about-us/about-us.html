@@ -1,0 +1,28 @@
+<!-- <ion-header>
+  <ion-navbar color="msp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="custom_ion_title" class="uni">{{textData[0]}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tappable (click)="home()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content class="uni" text-wrap>
+  <div id="title-bg-header">
+
+    <div align="right" tappable>
+      <img src='assets/images/menubtn.png' (click)="presentPopover($event)" id="menubtntwo">
+    </div>
+    <ion-scroll scrollY="true" text-wrap style="margin-left: 11px;">
+      <div class="uni" align="center">
+        <h2 id="item_font_3">{{textData[0]}}</h2>
+      </div>
+      <div [innerHTML]="data" text-wrap></div>
+    </ion-scroll>
+  </div>
+</ion-content>

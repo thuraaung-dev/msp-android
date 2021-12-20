@@ -1,0 +1,37 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <div class="menu-header" *ngIf="flag">
+      <!-- <ion-row>
+        <ion-col tappable (click)="edit()" menuClose>
+          <img src="{{profile}}"  onError="this.src = 'assets/images/user-icon.png'"  class="avatar motion spin fade" style="width: 80px; height: 80px; top: 13px; left: 15px;">
+        </ion-col>        
+      </ion-row>
+      <div class="menu-bottom">
+        <ion-row>
+          <ion-col tappable (click)="edit()" menuClose>
+            <div style="padding:7px;padding-bottom:1px;padding-left:0px;color:#ffffff;" class="uni">{{username}}</div>
+            <div style="color:#ffffff;" class="uni">{{phonenumber}}</div>
+          </ion-col>
+        </ion-row>
+      </div> -->
+    </div>
+  </ion-header>
+  <ion-content>
+    <div>
+      <ion-item-group tappable *ngFor="let p of pages">
+        <ion-item-divider color="light" *ngIf="p.name!=''">
+          <span class="uni">{{p.name}}</span>
+        </ion-item-divider>
+        <ion-item menuClose *ngFor="let a of p.data" tappable (click)="openPage(a)">
+          <ion-icon [name]="a.icon" item-left color="mwalletbtn"></ion-icon>
+          <span style="color:#808080;" class="uni">{{a.title}}</span>
+        </ion-item>
+      </ion-item-group>
+    </div>
+
+  </ion-content>
+
+</ion-menu>
+<div id="bdmain"></div>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

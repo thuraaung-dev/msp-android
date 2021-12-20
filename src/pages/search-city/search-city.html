@@ -1,0 +1,82 @@
+<!-- <ion-header>
+  <ion-navbar color="msp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="custom_ion_title" class="uni">{{textData[0]}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tappable (click)="home()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+<ion-content mode="md">
+  <div id="title-bg-image">
+    <div align="right" tappable>
+      <img src='assets/images/menubtn.png' (click)="presentPopover($event)" id="menubtn">
+    </div>
+    <ion-scroll scrollY="true">
+      <div class="uni" align="center">
+        <h2 id="item_font_3">{{textData[0]}}</h2>
+      </div>
+      <div align="right" tappable>
+        <button mode="md" ion-button class="scroll-item" mode="md" tappable (click)="changeAlpha('mm')"
+          id="mm"></button>
+        <button mode="md" ion-button class="scroll-item" mode="md" tappable (click)="changeAlpha('eng')"
+          id="eng"></button>
+      </div>
+      <div>
+        <ion-row align="center">
+          <ion-col>
+            <ion-icon tappable (click)="goMenu(cityList[0])">
+              <img style="width: 155px; height: 50px;" src="assets/images/btn_npt.png">
+            </ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon tappable (click)="goMenu(cityList[1])">
+              <img style="width: 155px; height: 50px;" src="assets/images/btn_ygn.png">
+            </ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row align="center">
+          <ion-col>
+            <ion-icon tappable (click)="goMenu(cityList[2])">
+              <img style="width: 155px; height: 50px;" src="assets/images/btn_mdy.png">
+            </ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon tappable (click)="goMenu(cityList[3])">
+              <img style="width: 155px; height: 50px;" src="assets/images/btn_oth.png">
+            </ion-icon>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div style="padding-left:10px; padding-right:8px; padding-top: 20px; padding-bottom: 5px;">
+        <ion-item class="uni">
+          <ion-label floating style="margin-top: 7px;"><span class="uni">Choose {{townshipName}} Township</span>
+          </ion-label>
+          <ion-select class="uni" [(ngModel)]="township" interface="popover" (ionChange)="changeTownship(township)">
+            <ion-option style="font-weight: bold;font-size: 9px !important;" *ngFor="let data of townshiplist"
+              [value]="data" class="uni">
+              <span class="uni" style="font-weight: bold;font-size: 9px !important;"> {{data.name}} </span>
+            </ion-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <div style="padding-left:10px; padding-right:8px; padding-top: 5px; padding-bottom: 5px;">
+        <ion-item (click)="goCategoryList()" text-wrap>
+          <ion-input readonly="true" class="uni" type="text" placeholder={{categoryName}} [(ngModel)]="categoryName">
+          </ion-input>
+          <div color="mspbtn" item-right tappable style="padding:0px;width:20px; vertical-align: middle;">
+            <ion-icon color="mspbtn" name="list-box"></ion-icon>
+          </div>
+        </ion-item>
+        <div class="uni" align="center" style="padding-top: 20px; padding-bottom: 30px;">
+          <button style="width: 100%;" color="mspsearch" ion-button tappable
+            (click)="search()">{{textData[2] | uppercase}}</button>
+        </div>
+      </div>
+    </ion-scroll>
+  </div>
+</ion-content>

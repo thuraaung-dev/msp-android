@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-navbar color="msp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="custom_ion_title" class="uni">{{textData[0]}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tappable (click)="home()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+
+<ion-content mode="md">
+
+  <div id="title-bg-image">
+    <div align="right" tappable>
+      <img src='assets/images/menubtn.png' (click)="presentPopover($event)" id="menubtn">
+    </div>
+    <ion-scroll scrollY="true" style="margin-left: 11px;">
+      <div class="uni" align="center">
+        <h2 id="item_font_3">{{textData[0]}}</h2>
+      </div>
+      <ion-row class="uni" style="padding-right: 5px; padding-left: 5px;">
+        <ion-col text-wrap col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 *ngFor="let data of itemList"
+          (click)="goMenu(data)">
+          <div class="wallet" tappable>
+            <div align="center" style="width: 100%;">
+              <img src="assets/images/{{data.image}}">
+              <span class="uni">
+                <div style="margin-top: -10%; word-wrap:normal;font-size: 12px !important; color:#2457A8;">
+                  {{data.text}}
+                </div>
+              </span>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-scroll>
+  </div>
+</ion-content>

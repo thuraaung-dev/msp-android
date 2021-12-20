@@ -1,0 +1,19 @@
+page-search-city-result {
+  .divider {
+    padding-left: 16px !important;
+    border-bottom: 1px solid #ccc !important;
+    font-size: 1.8rem !important;
+    color: #016042 !important;
+    font-weight: bold !important;
+  }
+
+  ion-item {
+    border-bottom: 1px solid #dedede !important;
+  }
+
+  .item-inner {
+    border-bottom: 0px solid #dedede !important;
+    padding-left: 11px !important;
+  }
+
+}

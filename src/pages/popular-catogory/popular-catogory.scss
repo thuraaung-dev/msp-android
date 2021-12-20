@@ -1,0 +1,110 @@
+page-popular-catogory {
+    ion-card img {
+        display: block;
+        width: 50%;
+        height: 30%;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      
+    //   .has-refresher > .scroll-content {
+      
+    //     border-top: 0px solid #ddd !important;
+       
+    //   }
+    
+    //   .second_card_setting_one {
+    //     border-radius: 10px;
+    //     margin: 0 auto;
+    //     margin-bottom: 10px !important;
+    //     margin-top: 10px;
+    // }
+    
+    .rounded {
+      border-radius: 7px;
+      margin: 0 auto;  
+      margin-bottom: 5% !important;  
+      height: 17%;  
+      text-align: center;  
+      color: green;  
+      width: 99%;  
+      line-height: 35px;  
+      padding-top: 2%;  
+      // background-color: #0095f3;  
+      // background-color: #00a0f3;
+      background-color:  #003af3;
+    
+     
+    }
+    
+    .caption1{
+      color: white !important;
+      font-size: 16px !important;
+      font-weight: bold !important;
+     
+    }
+    
+    .caption2{
+      font-size: 25px !important;
+      font-weight: 100 !important;
+      color: white !important;
+    }
+    
+    .first_div_one {
+      padding-top: 105px;
+      margin-left: 15px;
+      color: white !important;
+      font-size: 16px !important;
+      font-weight: bold !important;
+    }
+    
+    .second_div_one {
+      padding-top: 10px;
+      padding-right: 5px;
+      margin-left: 15px;
+      font-size: 25px !important;
+      font-weight: 100 !important;
+      color: #ce972d !important;
+    }
+    
+    .wallet{
+      font-size: 1.3rem;
+      color: black;
+      text-align: center;
+    }
+    
+    ion-col img {
+      display: block;
+      width: 70%;
+      height: 30%;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+    
+    @media only screen and (min-device-width: 500px) {
+      // default iPad screens 
+      .ion-text {
+        margin-top: -5%;
+      }
+    } 
+    
+    @media screen and (min-width: 769px) {
+      .ion-text {
+        margin-top: -5%;
+      }
+    }
+    
+    @media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+      .ion-text {
+        margin-top: -5%;
+      }
+    }
+    
+    @media only screen and (max-device-width: 480px) {
+      /* STYLES HERE */
+    }
+    
+    .ion-text {
+      margin-top: -20%;
+    }
+}
