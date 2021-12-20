@@ -1,0 +1,42 @@
+https://github.com/an-rahulpandey/cordova-plugin-dbcopy
+
+https://github.com/xpbrew/cordova-sqlite-storage
+
+https://www.npmjs.com/package/cordova-plugin-sqlite
+
+https://github.com/xpbrew/cordova-sqlite-storage
+
+https://github.com/brodybits/cordova-sqlite-ext
+
+https://github.com/iursevla/ionic3-PreDB
+
+https://devdactic.com/ionic-sqlite-queries-database/
+
+adb exec-out run-as <your app package> cat databases/products.db > local_products.db
+
+https://devdactic.com/ionic-sqlite-queries-database/
+https://www.thepolyglotdeveloper.com/2015/01/deploy-ionic-framework-app-pre-filled-sqlite-db/
+----------------------------------------------------------------------------------------------------------------------
+https://www.freakyjolly.com/ionic-3-image-photo-viewer-example-application/
+
+$ ionic cordova plugin add com-sarriaroman-photoviewer
+$ npm install --save @ionic-native/photo-viewer
+
+adb -d exec-out run-as com.mmsp.myanmarsuperpages cat /data/data/com.mmsp.myanmarsuperpages/databases/mmypnew_000.db > mmypnew_000.db
+adb -d shell "run-as com.myanmarsuperpages cat /data/data/com.myanmarsuperpages/databases/mmypnew_000.db" > mmypnew_000.db
+let insertRows = [];
+deleteArr.forEach(item => {
+    insertRows.push([
+        ""DELETE FROM " + item.tblname + " WHERE syskey = ?",
+        [item.sysKey]
+    ]);
+});
+this.database.sqlBatch(insertRows).then((result) => {
+    console.info("Inserted items");
+}).catch(e => console.log(e));
+selected="{{(i==0).toString()}}"
+
+https://ionicframework.com/docs/v3/native/http/
+npm install cordova-android@6.2.3 --save-exact
+Access to XMLHttpRequest at 'http://myanmarsuperpages.com/superpanel/api/updatecheck.php?key=E75XIPKcMPX&modify_at=2019-08-12%2023:56:23' from origin 'file://' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+myanmarsuperpages.com/superpanel/api/updatecheck.php?key=E75XIPKcMPX&modify_at=2019-08-12%2023:56:23:1 Failed to load resource: net::ERR_FAILED

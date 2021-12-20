@@ -1,0 +1,29 @@
+For backup
+1. go to the ....../sdk/platform-tools/
+2. Alt + D, type 'cmd' and Enter
+3. type 'adb backup -f example.ab app.package.name' in command line
+
+For restore
+1. 1. go to the ....../sdk/platform-tools/
+2. Alt + D, type 'cmd' and Enter
+3. type 'adb restore example.ab' in command line
+
+For extract sqlite database
+1.copy 'example.ab' and pase to 'Android Backup Extractor\android-backup-extractor-20171005-bin' 
+2.after pase Alt+D, type 'cmd' and Enter
+3. type 'java -jar abe.jar unpack example.ab data.tar
+4. extract the data with RAR file 
+5. after you will find the sqlite database in apps folder
+
+-----------------------------------------------------------------------------------------------
+adb backup -f msp.ab com.mmsp.myanmarsuperpagesdev
+adb restore msp.ab
+java -jar abe.jar unpack msp.ab data.rar
+
+
+
+
+
+
+
+
